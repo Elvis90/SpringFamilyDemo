@@ -1,7 +1,6 @@
 package com.elvis.demo.model;
 
 
-import lombok.*;
 import org.hibernate.annotations.Type;
 import org.joda.money.Money;
 
