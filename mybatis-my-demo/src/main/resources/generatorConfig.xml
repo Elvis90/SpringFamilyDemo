@@ -43,5 +43,6 @@
                             typeHandler="com.elvis.demo.handle.StatusEnumTypeHandler"/>
         </table>
 
+
     </context>
 </generatorConfiguration>
