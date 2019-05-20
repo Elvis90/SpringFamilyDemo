@@ -1,0 +1,9 @@
+eclipse.m2.WorkspacelifecycleMappingsLocation=D\:/\u5DE5\u4F5C\u7A7A\u95F4/SpringFamilyTest/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml
+eclipse.m2.defaultRuntime=apache-maven-3.6.0
+eclipse.m2.downloadSources=true
+eclipse.m2.runtimes=apache-maven-3.6.0
+eclipse.m2.runtimesNodes/apache-maven-3.6.0/extensions=P/jpa-complex-demo-my|P/demo-2|P/demo-1
+eclipse.m2.runtimesNodes/apache-maven-3.6.0/location=D\:\\Program Files\\apache-maven-3.6.0
+eclipse.m2.runtimesNodes/apache-maven-3.6.0/type=EXTERNAL
+eclipse.m2.userSettingsFile=D\:\\Program Files\\apache-maven-3.6.0\\conf\\settings.xml
+eclipse.preferences.version=1

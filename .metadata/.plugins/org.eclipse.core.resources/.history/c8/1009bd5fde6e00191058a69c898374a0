@@ -1,0 +1,46 @@
+package com.elvis.demo.service;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.elvis.demo.mapper.CoffeeOrderMapper;
+import com.elvis.demo.model.Coffee;
+import com.elvis.demo.model.CoffeeOrder;
+import com.elvis.demo.model.CoffeeOrderExample;
+import com.elvis.demo.model.OrderState;
+
+@Service
+public class CoffeeOrderService {
+
+	@Autowired
+	private CoffeeOrderMapper com;
+	//创建订单
+	public void create(String customer,List<Coffee> coffeelist) {
+		CoffeeOrder co = CoffeeOrder.builder().customer(customer).isDelete(0).status(OrderState.INIT).createTime(new Date()).coffeelist(coffeelist).build();
+		
+	}
+	//查询订单
+	public List<CoffeeOrder> getOrderByCustomer(String customer) {
+		CoffeeOrderExample coe = new CoffeeOrderExample();
+		coe.createCriteria().andCustomerEqualTo(customer);
+		return com.selectByExample(coe);
+	}
+	
+	//更新订单状态
+	
+	public void updateStatus(OrderState os,Long orderId) {
+		CoffeeOrderExample coe = new CoffeeOrderExample();
+		coe.createCriteria().andIdEqualTo(orderId);
+		List<CoffeeOrder> list = com.selectByExample(coe);
+		if(list!=null) {
+			CoffeeOrder coffeeOrder = list.get(0);
+			coffeeOrder.setStatus(os);
+			coffeeOrder.setUpdateTime(new Date());
+			com.updateByExample(coffeeOrder, coe);
+		}
+		
+	}
+}

@@ -1,0 +1,17 @@
+spring.datasource.url=jdbc:mysql://172.19.2.115/testcell
+spring.datasource.username=root
+spring.datasource.password=mzyMZY123
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+#多数据源测试
+#celltest.datasource.url=jdbc:mysql://172.19.2.115/testcell
+#celltest.datasource.username=root
+#celltest.datasource.password=mzyMZY123
+#celltest.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+#test.datasource.url=jdbc:mysql://172.19.2.115/test
+#test.datasource.username=root
+#test.datasource.password=mzyMZY123
+#test.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+logging.level.com.elvis.demo=info

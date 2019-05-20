@@ -1,0 +1,10 @@
+package com.elvis.demo.controller;
+
+import org.springframework.core.annotation.Order;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@Order
+public class OrderController {
+
+}

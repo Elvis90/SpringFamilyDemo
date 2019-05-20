@@ -1,0 +1,9 @@
+package com.elvis.demo.controller.request;
+
+public class OrderRequest {
+
+	private String customer;
+	
+	private Integer[] coffeeArray;
+	
+}

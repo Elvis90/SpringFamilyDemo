@@ -1,0 +1,64 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="ehcache.xsd">
+    <diskStore path="java.io.tmpdir"/>
+    <defaultCache
+        maxElementsInMemory="50000"
+        maxElementsOnDisk="100000"
+        eternal="true"
+        overflowToDisk="true"
+        diskPersistent="false"
+        timeToIdleSeconds="0"
+        timeToLiveSeconds="0"
+        diskSpoolBufferSizeMB="50"
+        diskExpiryThreadIntervalSeconds="120"
+        memoryStoreEvictionPolicy="LFU"
+        />
+
+    <cache name="demoCache"
+        maxElementsInMemory="1"
+        maxElementsOnDisk="100000"
+        eternal="false"
+        overflowToDisk="true"
+        diskPersistent="false"
+        timeToIdleSeconds="0"
+        timeToLiveSeconds="30"
+        diskSpoolBufferSizeMB="50"
+        diskExpiryThreadIntervalSeconds="120"
+        memoryStoreEvictionPolicy="FIFO"
+        />
+
+    <cache name="demoCache02"
+        maxElementsInMemory="1"
+        maxElementsOnDisk="100000"
+        eternal="false"
+        overflowToDisk="true"
+        diskPersistent="false"
+        timeToIdleSeconds="0"
+        timeToLiveSeconds="0"
+        diskSpoolBufferSizeMB="50"
+        diskExpiryThreadIntervalSeconds="120"
+        memoryStoreEvictionPolicy="FIFO"
+        />
+</ehcache>
+
+<!--  
+    diskStore:设置缓存文件 .data 的创建路径
+                user.home – 用户主目录;
+                user.dir – 用户当前工作目录
+                java.io.tmpdir – 默认临时文件路径
+    name:缓存名称.  
+    maxElementsInMemory:缓存最大个数.
+    maxElementsOnDisk:磁盘中最大缓存对象数,若是0表示无穷大.  
+    eternal="false":缓存中对象是否为永久的,如果为true,超时设置将被忽略,对象从不过期 
+    overflowToDisk="true":当内存中对象数量达到maxElementsInMemory时,Ehcache将会对象写到磁盘中.  
+    diskPersistent:是否缓存虚拟机重启期数据,默认为false.  
+    timeToIdleSeconds:设置对象在失效前的允许闲置时间(单位:秒),当缓存闲置 n 秒后销毁.
+                            仅当eternal=false对象不是永久有效时使用,可选属性,默认值是0,也就是可闲置时间无穷大.  
+    timeToLiveSeconds:设置对象在失效前允许存活时间(单位:秒),从开始创建的时间算起,当缓存存活 n 秒后销毁.
+                            最大时间介于创建时间和失效时间之间.仅当eternal=false对象不是永久有效时使用,默认是0.,也就是对象存活时间无穷大.  
+    diskSpoolBufferSizeMB:这个参数设置DiskStore(磁盘缓存)的缓存区大小.默认是30MB.每个Cache都应该有自己的一个缓冲区.  
+    diskExpiryThreadIntervalSeconds:对象检测线程运行时间间隔.标识对象状态的线程多长时间运行一次.  
+    memoryStoreEvictionPolicy:当达到maxElementsInMemory限制时,Ehcache将会根据指定的策略去清理内存.
+                                    默认策略是LRU(最近最少使用).你可以设置为FIFO(先进先出)或是LFU(较少使用).  
+    clearOnFlush:内存数量最大时是否清除.  
+        -->  

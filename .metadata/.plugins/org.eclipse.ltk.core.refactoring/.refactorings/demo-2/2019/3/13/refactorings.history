@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;demo-2/src/main/resources/设备ID.csv&apos; to &apos;devids.csv&apos;" description="Rename resource &apos;设备ID.csv&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/设备ID.csv" name="devids.csv" stamp="1553409419089" updateReferences="true"/>&#x0A;<refactoring comment="Move &apos;devids.csv&apos; to &apos;static&apos;" description="Move &apos;devids.csv&apos; to &apos;static&apos;" destination="src/main/resources/static" element1="src/main/resources/devids.csv" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1553409640746" updateReferences="true"/>
+</session>

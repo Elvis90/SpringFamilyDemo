@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="1" key="com.springsource.sts.boot.ui.dialogsettings.sortColumn"/>
+	<item value="300" key="com.springsource.sts.boot.ui.dialogsettings.columnWidth1"/>
+	<item value="150" key="com.springsource.sts.boot.ui.dialogsettings.columnWidth0"/>
+</section>
