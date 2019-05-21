@@ -1111,71 +1111,74 @@
     <table id="278" parent="5" name="goods">
       <Comment>抢购商品表</Comment>
     </table>
-    <table id="279" parent="5" name="t_menu">
+    <table id="279" parent="5" name="goods_order">
+      <Comment>抢购订单表</Comment>
+    </table>
+    <table id="280" parent="5" name="t_menu">
       <Engine>MyISAM</Engine>
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="280" parent="5" name="t_order_coffee">
+    <table id="281" parent="5" name="t_order_coffee">
       <Engine>MyISAM</Engine>
       <Collation>utf8_general_ci</Collation>
     </table>
-    <column id="281" parent="277" name="id">
+    <column id="282" parent="277" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="277" name="update_time">
+    <column id="283" parent="277" name="update_time">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="277" name="create_time">
+    <column id="284" parent="277" name="create_time">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="277" name="is_delete">
+    <column id="285" parent="277" name="is_delete">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="277" name="customer">
+    <column id="286" parent="277" name="customer">
       <Position>5</Position>
       <Comment>顾客姓名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="277" name="status">
+    <column id="287" parent="277" name="status">
       <Position>6</Position>
       <Comment>订单状态</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="287" parent="277" name="PRIMARY">
+    <key id="288" parent="277" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="288" parent="278" name="id">
+    <column id="289" parent="278" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="278" name="goods_name">
+    <column id="290" parent="278" name="goods_name">
       <Position>2</Position>
       <Comment>商品名称</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="278" name="count">
+    <column id="291" parent="278" name="count">
       <Position>3</Position>
       <Comment>商品总量</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1183,7 +1186,7 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="278" name="num">
+    <column id="292" parent="278" name="num">
       <Position>4</Position>
       <Comment>已售出数量</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1191,69 +1194,100 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="292" parent="278" name="PRIMARY">
+    <key id="293" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="293" parent="279" name="id">
+    <column id="294" parent="279" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="279" name="update_time">
+    <column id="295" parent="279" name="goods_id">
+      <Position>2</Position>
+      <Comment>商品ID</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="296" parent="279" name="goods_name">
+      <Position>3</Position>
+      <Comment>商品名称</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="297" parent="279" name="create_time">
+      <Position>4</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="298" parent="279" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="299" parent="280" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="300" parent="280" name="update_time">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="279" name="create_time">
+    <column id="301" parent="280" name="create_time">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="279" name="is_delete">
+    <column id="302" parent="280" name="is_delete">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="279" name="name">
+    <column id="303" parent="280" name="name">
       <Position>5</Position>
       <Comment>咖啡名称</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="279" name="price">
+    <column id="304" parent="280" name="price">
       <Position>6</Position>
       <Comment>咖啡价格</Comment>
       <DataType>decimal(19)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="299" parent="279" name="PRIMARY">
+    <key id="305" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="300" parent="280" name="coffee_order_id">
+    <column id="306" parent="281" name="coffee_order_id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="280" name="coffee_id">
+    <column id="307" parent="281" name="coffee_id">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="302" parent="280" name="FKibbrerua7hhfww508p8ci4i5m">
+    <index id="308" parent="281" name="FKibbrerua7hhfww508p8ci4i5m">
       <ColNames>coffee_order_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="303" parent="280" name="FKjybdh310ugqa20j8mclnwlsxa">
+    <index id="309" parent="281" name="FKjybdh310ugqa20j8mclnwlsxa">
       <ColNames>coffee_id</ColNames>
       <Type>btree</Type>
     </index>

@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/customerserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eurekaserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-my-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatisGenerator" charset="UTF-8" />
   </component>
 </project>

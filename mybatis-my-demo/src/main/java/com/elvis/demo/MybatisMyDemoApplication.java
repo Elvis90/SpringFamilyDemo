@@ -20,6 +20,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,6 +36,8 @@ import java.util.List;
 @EnableCaching(proxyTargetClass=true)
 @EnableAspectJAutoProxy
 @EnableDiscoveryClient
+@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 10)
+//当前版本redis会在session过期时间上加300S
 public class MybatisMyDemoApplication implements CommandLineRunner{
 
 	@Autowired
@@ -51,8 +54,8 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		//generateArtifacts();
-		//showmybatis();
+	//	generateArtifacts();
+//		showmybatis();
 		/*//测试缓存
 		System.out.println(cs.getMenu().size());
 		cs.creatCoffee("雪碧", Money.of(CurrencyUnit.of("CNY"), 18.50));
