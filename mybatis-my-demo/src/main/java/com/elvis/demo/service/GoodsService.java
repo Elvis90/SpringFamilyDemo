@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Elvis
@@ -32,6 +33,11 @@ public class GoodsService {
         return "商品:"+goods.getGoodsName()+"总计："+goods.getCount()+"件；目前已售出:"+Goodsnum+"件";
     }
 
+    //查询所有商品信息
+    //@Cacheable(cacheNames="allGoods")
+    public List<Goods> getAll(){
+        return  gm.selectAll();
+    }
     //下单
     public boolean seckill(Long id) throws RuntimeException{
         //加锁

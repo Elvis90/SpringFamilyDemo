@@ -1,6 +1,10 @@
 package com.elvis.demo.controller;
 
+import com.alibaba.fastjson.JSONObject;
+import com.elvis.demo.model.Goods;
 import com.elvis.demo.service.GoodsService;
+import com.elvis.demo.service.RedisTemplateService;
+import com.elvis.demo.task.MsghandleThread;
 import com.elvis.demo.utils.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 /**
  * @author Elvis
@@ -23,22 +26,44 @@ import java.util.Map;
 public class GoodsController {
     @Autowired
     GoodsService gs;
+    //String类型redis有默认处理的类
+//    @Autowired
+//    RedisTemplate<String,String> rt;
+    @Autowired
+    RedisTemplateService rts;
 
-    @RequestMapping(value = "/first", method = RequestMethod.GET)
-    public Map<String, Object> firstResp (HttpServletRequest request){
-        Map<String, Object> map = new HashMap<>();
-        request.getSession().setAttribute("request Url", request.getRequestURL());
-        map.put("request Url", request.getRequestURL());
-        return map;
+//    @GetMapping("sendMsg")
+//    @ResponseBody
+//    public Object sendMsg(@RequestParam(value = "msg",required = false) String msg, @RequestBody(required = false) JSONObject json ,HttpServletRequest request){
+//        rt.convertAndSend("msg",msg);
+//        return "发送成功";
+//    }
+
+    @GetMapping("sendMsg")
+    @ResponseBody
+    public Object sendMsg(@RequestBody(required = false) JSONObject msg , HttpServletRequest request){
+
+        rts.sendmsg(msg);
+        return "发送成功";
     }
 
-    @RequestMapping(value = "/sessions", method = RequestMethod.GET)
-    public Object sessions (HttpServletRequest request){
-        Map<String, Object> map = new HashMap<>();
-        map.put("sessionId", request.getSession().getId());
-        map.put("message", request.getSession().getAttribute("map"));
-        return map;
+    @GetMapping("sendMsgbyqueue")
+    @ResponseBody
+    public Object sendMsgbyqueue(@RequestBody(required = false) JSONObject msg , HttpServletRequest request){
+        for (int i = 0; i < 10; i++) {
+            msg.put("flag",i);
+            rts.sendmsgByquene(RedisTemplateService.QUENE_KEY,msg);
+        }
+        return "发送成功";
     }
+
+    @GetMapping("start")
+    @ResponseBody
+    public Object start(HttpServletRequest request){
+        new Thread(new MsghandleThread(rts)).start();
+        return "消费线程启动成功";
+    }
+
     @GetMapping("query/{id}")
     @ResponseBody
     public Object query(@PathVariable("id") Long Id, HttpServletRequest request){
@@ -46,6 +71,13 @@ public class GoodsController {
         log.info("sessionId:{}",session.getId());
         String msg = gs.findById(Id);
         return new ResponseEntity<R>(R.data(msg), HttpStatus.OK);
+    }
+
+    @GetMapping("getall")
+    @ResponseBody
+    public Object getall(HttpServletRequest request){
+        List<Goods> data = gs.getAll();
+        return new ResponseEntity<R>(R.data(data), HttpStatus.OK);
     }
 
     @PostMapping("seckill/{id}")

@@ -5,6 +5,7 @@ import com.elvis.demo.model.Coffee;
 import com.elvis.demo.model.CoffeeExample;
 import com.elvis.demo.service.CoffeeOrderService;
 import com.elvis.demo.service.CoffeeService;
+import com.elvis.demo.service.RedisTemplateService;
 import lombok.extern.slf4j.Slf4j;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
@@ -37,7 +38,7 @@ import java.util.List;
 @EnableAspectJAutoProxy
 @EnableDiscoveryClient
 @EnableRedisHttpSession(maxInactiveIntervalInSeconds = 10)
-//当前版本redis会在session过期时间上加300S
+//当前版本spring redis会在session过期时间上加300S
 public class MybatisMyDemoApplication implements CommandLineRunner{
 
 	@Autowired
@@ -46,10 +47,14 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 	CoffeeService cs;
 	@Autowired
 	CoffeeOrderService cos;
+	@Autowired
+	RedisTemplateService rts;
 	public static void main(String[] args) {
 		SpringApplication.run(MybatisMyDemoApplication.class, args);
 	}
-	
+
+
+
 
 
 	@Override
@@ -70,6 +75,8 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 		List<CoffeeOrder> list = cos.getOrderByCustomer("周杰伦");
 		list.forEach(c->System.out.println(c));
 		cos.updateStatus(OrderState.TAKEN, list.get(0).getId());*/
+
+		//new Thread(new MsghandleThread()).start();
 	}
 
 	private void generateArtifacts() throws Exception {
