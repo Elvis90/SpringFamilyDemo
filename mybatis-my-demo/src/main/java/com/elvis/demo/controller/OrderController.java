@@ -1,7 +1,9 @@
 package com.elvis.demo.controller;
 
+import com.elvis.demo.handle.StatusEnumTypeHandler;
 import com.elvis.demo.model.Coffee;
 import com.elvis.demo.model.CoffeeOrder;
+import com.elvis.demo.model.OrderState;
 import com.elvis.demo.service.CoffeeOrderService;
 import com.elvis.demo.service.CoffeeService;
 import com.elvis.demo.utils.R;
@@ -54,6 +56,12 @@ public class OrderController {
 		
 	}
 
+	//更新咖啡状态
+	@PostMapping("update")
+	public Object update(@RequestParam(value = "orderid") Long orderId,@RequestParam(value = "status") Integer status){
+		OrderState orderState = new StatusEnumTypeHandler().valueOf(status);
+		return cos.updateStatus(orderState,orderId);
+	}
 	//查询订单
 	@GetMapping("get")
 	public Object query(@RequestParam(value = "orderid",required = false) Long orderId,@RequestParam(value = "customs",required = false) String customs){

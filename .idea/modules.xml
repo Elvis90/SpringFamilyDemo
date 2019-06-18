@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringFamilyTest.iml" filepath="$PROJECT_DIR$/.idea/SpringFamilyTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/barista/barista.iml" filepath="$PROJECT_DIR$/barista/barista.iml" />
       <module fileurl="file://$PROJECT_DIR$/customerserver/customerserver.iml" filepath="$PROJECT_DIR$/customerserver/customerserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-my-demo/demo.iml" filepath="$PROJECT_DIR$/mybatis-my-demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/eurekaserver/eurekaserver.iml" filepath="$PROJECT_DIR$/eurekaserver/eurekaserver.iml" />

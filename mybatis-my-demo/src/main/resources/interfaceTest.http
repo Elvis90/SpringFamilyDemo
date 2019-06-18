@@ -1,0 +1,17 @@
+### 获取所有商品信息
+GET http://127.0.0.1:8877/goods/getall/
+
+#Accept : application/json
+#Content-Type : application/json;charset=UTF-8
+#Authorization:
+#{
+#    "username": "xiaoyue",
+#    "realname": "小岳",
+#    "password": "111111",
+ #   "email": "lianggzone@163.com",
+  #  "tel": "18305930000",
+   # "weixin": "LiangGzone",
+    #"sex": 1
+#}
+
+###获取单个商品信息

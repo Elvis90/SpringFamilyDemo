@@ -1,5 +1,6 @@
 package com.elvis.demo;
 
+import com.elvis.demo.integration.Barista;
 import com.elvis.demo.mapper.CoffeeMapper;
 import com.elvis.demo.model.Coffee;
 import com.elvis.demo.model.CoffeeExample;
@@ -20,6 +21,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
@@ -39,6 +41,7 @@ import java.util.List;
 @EnableDiscoveryClient
 @EnableRedisHttpSession(maxInactiveIntervalInSeconds = 10)
 //当前版本spring redis会在session过期时间上加300S
+@EnableBinding(Barista.class)
 public class MybatisMyDemoApplication implements CommandLineRunner{
 
 	@Autowired

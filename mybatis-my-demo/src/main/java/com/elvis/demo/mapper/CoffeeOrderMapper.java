@@ -2,6 +2,7 @@ package com.elvis.demo.mapper;
 
 import com.elvis.demo.model.CoffeeOrder;
 import com.elvis.demo.model.CoffeeOrderExample;
+import com.elvis.demo.model.OrderState;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.SelectKey;
@@ -87,4 +88,6 @@ public interface CoffeeOrderMapper {
      * @mbg.generated Wed Mar 06 16:51:10 CST 2019
      */
     int updateByExample(@Param("record") CoffeeOrder record, @Param("example") CoffeeOrderExample example);
+
+    void updateStatus(@Param("status") OrderState status, @Param("orderId") Long orderId);
 }

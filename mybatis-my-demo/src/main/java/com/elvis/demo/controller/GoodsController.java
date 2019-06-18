@@ -19,6 +19,8 @@ import java.util.List;
 /**
  * @author Elvis
  * @create 2019-05-21 9:42
+ * 商品秒杀案例
+ * redis作为消息队列的例子
  */
 @RestController
 @RequestMapping("goods")
