@@ -1,5 +1,6 @@
 package com.elvis.demo.controller;
 
+import com.elvis.demo.annotation.MyLog;
 import com.elvis.demo.controller.request.CoffeeRequest;
 import com.elvis.demo.model.Coffee;
 import com.elvis.demo.service.CoffeeService;
@@ -11,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -38,7 +40,9 @@ public class CoffeeController {
 	}
 
 	@PostMapping("add")
-	public ResponseEntity<R> addCoffee(@Valid CoffeeRequest cr,BindingResult restult){
+	@MyLog(title = "添加咖啡操作")
+	//@RequestHeader(value = "username") String username,
+	public ResponseEntity<R> addCoffee(@Valid CoffeeRequest cr, BindingResult restult, HttpServletRequest request) {
 		ResponseEntity<R> res =null;
 //		if(restult.hasErrors()) {
 //			log.error(restult.toString());
@@ -46,8 +50,15 @@ public class CoffeeController {
 //			return res;
 //		}
 		//新增咖啡
-		Coffee cf = cs.creatCoffee(cr.getName(),cr.getPrice());
-		res= new ResponseEntity<R>(R.data(cf),HttpStatus.OK);
+		try {
+
+			Coffee cf = cs.creatCoffee(cr.getName(),cr.getPrice());
+			res= new ResponseEntity<R>(R.data(cf),HttpStatus.OK);
+		}catch (Exception e){
+			log.error("新增咖啡失败"+e.getMessage());
+			res= new ResponseEntity<R>(R.error(),HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
 		return res;
 	}
 	
