@@ -28,6 +28,7 @@ import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 import java.io.File;
@@ -49,6 +50,7 @@ import java.util.List;
 @EnableRedisHttpSession(maxInactiveIntervalInSeconds = 10)
 //当前版本spring redis会在session过期时间上加300S
 @EnableBinding(Barista.class)
+@ImportResource({"classpath*:redisson.yaml"})
 public class MybatisMyDemoApplication implements CommandLineRunner{
 
 	@Autowired
@@ -128,7 +130,7 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 
 	@Bean
 	public Redisson redisson() throws IOException {
-		Config config = Config.fromYAML(new File("/redisson.yaml"));
+		Config config = Config.fromYAML(new File("redisson.yaml"));
 		config.useSingleServer();
 		return (Redisson) Redisson.create(config);
 	}
