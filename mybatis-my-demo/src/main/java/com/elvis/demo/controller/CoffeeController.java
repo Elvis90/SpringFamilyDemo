@@ -32,7 +32,7 @@ public class CoffeeController {
 	}
 
 	//获取咖啡菜单
-	@GetMapping("menu")
+	@GetMapping("dock")
 	@ResponseBody
 	public ResponseEntity<R> getMenu() {
 		List<Coffee> menulist = cs.getMenu();
@@ -42,22 +42,21 @@ public class CoffeeController {
 	@PostMapping("add")
 	@MyLog(title = "添加咖啡操作")
 	//@RequestHeader(value = "username") String username,
-	public ResponseEntity<R> addCoffee(@Valid CoffeeRequest cr, BindingResult restult, HttpServletRequest request) {
+	public ResponseEntity<R> addCoffee(@Valid CoffeeRequest cr, HttpServletRequest request,BindingResult restult) throws Exception{
 		ResponseEntity<R> res =null;
-//		if(restult.hasErrors()) {
-//			log.error(restult.toString());
-//			res=new ResponseEntity<R>(R.error("参数错误"), HttpStatus.BAD_REQUEST);
-//			return res;
-//		}
+		if(restult.hasErrors()) {
+			log.error(restult.toString());
+			throw new Exception("参数异常");
+		}
 		//新增咖啡
-		try {
+	//	try {
 
 			Coffee cf = cs.creatCoffee(cr.getName(),cr.getPrice());
 			res= new ResponseEntity<R>(R.data(cf),HttpStatus.OK);
-		}catch (Exception e){
-			log.error("新增咖啡失败"+e.getMessage());
-			res= new ResponseEntity<R>(R.error(),HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+		//}catch (Exception e){
+		//	log.error("新增咖啡失败"+e.getMessage());
+		//	res= new ResponseEntity<R>(R.error(),HttpStatus.INTERNAL_SERVER_ERROR);
+	//	}
 
 		return res;
 	}

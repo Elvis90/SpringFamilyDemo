@@ -4,17 +4,19 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5e1ef82-8f93-46be-94a8-25793c69b243" name="Default Changelist" comment="redisd队列 发布订阅模式和队列模式">
-      <change afterPath="$PROJECT_DIR$/barista/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/annotation/MyLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/MyLogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/mapper/LogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/resources/mapper/com/elvis/demo/mapper/LogMapper.xml" afterDir="false" />
+    <list default="true" id="a5e1ef82-8f93-46be-94a8-25793c69b243" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/exception/Exceptionhandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/model/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/pool/AbstractThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/pool/ConvertThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/task/MyThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/PerformanceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/PerformanceAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-my-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-my-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/MybatisMyDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/MybatisMyDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/MyLogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/MyLogAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/RequestParamCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/RequestParamCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/CoffeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/CoffeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/mapper/CoffeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/mapper/CoffeeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/redis/RedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/redis/RedisCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-my-demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-my-demo/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/mybatis-my-demo/target/" />
@@ -88,12 +90,12 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/MyLogAspect.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/MybatisMyDemoApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state relative-caret-position="389">
+              <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,42 +104,38 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/GoodsController.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.5.RELEASE/spring-core-5.1.5.RELEASE-sources.jar!/org/springframework/cglib/proxy/MethodProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1660">
-              <caret line="89" column="24" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="245" selection-start-line="245" selection-end-line="245" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/OrderController.java">
+        <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/resources/redisson.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="506">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/service/CoffeeService.java">
+        <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+              <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/mapper/LogMapper.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo-1/src/main/java/com/elvis/demo/DataSourceConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+            <state relative-caret-position="-203">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#2558#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,6 +160,8 @@
       <find>fast</find>
       <find>BaseResultMap</find>
       <find>typeHandler</find>
+      <find>MsghandleThread</find>
+      <find>mysql</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,15 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/redis/ApplicationContextHolder.java" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/redis/RedisCache.java" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/service/GoodsService.java" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/resources/interfaceTest.http" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/resources/mapper/com/elvis/demo/mapper/GoodsMapper.xml" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/resources/ehcache.xml" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/service/RedisTemplateConfig.java" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/model/RedisMsg.java" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/component/RedisMessage.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/redis/RedisTemplateConfig.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/redis/RedisSubConfig.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/component/RedisMessageReceiver.java" />
@@ -197,10 +188,8 @@
         <option value="$PROJECT_DIR$/customerserver/src/main/java/com/elvis/demo/customerserver/service/FallbackCoffeeService.java" />
         <option value="$PROJECT_DIR$/customerserver/src/main/java/com/elvis/demo/customerserver/CustomerserverApplication.java" />
         <option value="$PROJECT_DIR$/customerserver/src/main/java/com/elvis/demo/customerserver/controller/CustomerController.java" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/GoodsController.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/model/Coffee.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/model/CoffeeOrder.java" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/integration/Barista.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/integration/OrderListener.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/resources/mapper/com/elvis/demo/mapper/CoffeeOrderMapper.xml" />
@@ -211,7 +200,6 @@
         <option value="$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/model/OrderState.java" />
         <option value="$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/repository/CoffeeOrderRepository.java" />
         <option value="$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/integration/Barista.java" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/MybatisMyDemoApplication.java" />
         <option value="$PROJECT_DIR$/barista/pom.xml" />
         <option value="$PROJECT_DIR$/barista/src/test/java/com/example/barista/barista/BaristaApplicationTests.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/OrderController.java" />
@@ -219,14 +207,26 @@
         <option value="$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/BaristaApplication.java" />
         <option value="$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/integration/BaristaListen.java" />
         <option value="$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/BreakpointTest.java" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/RequestParamCheck.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/annotation/MyLog.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/PerformanceAspect.java" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/CoffeeController.java" />
-        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/MyLogAspect.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/mapper/CoffeeMapper.java" />
         <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/mapper/LogMapper.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/GoodsController.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/pool/AbstractThreadPool.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/pool/ConvertBaiduGpsToAddrThreadPool.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/pool/ConvertThreadPool.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/Maintest.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/task/MyThread.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/exception/Exceptionhandle.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/RequestParamCheck.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/CoffeeController.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/MyLogAspect.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/component/RedisLock.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/redis/RedisCache.java" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/resources/redisson.yaml" />
+        <option value="$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/MybatisMyDemoApplication.java" />
       </list>
     </option>
   </component>
@@ -254,10 +254,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
-    <option name="y" value="296" />
-    <option name="width" value="1938" />
-    <option name="height" value="1100" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -267,12 +267,102 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="demo-1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="demo-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="demo-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="demo-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="demo-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="demo-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="elvis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="demo-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="elvis" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="demo-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="elvis" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="Imp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="demo-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="elvis" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="demo-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
@@ -337,7 +427,37 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-my-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-my-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="handle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-my-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
@@ -355,7 +475,69 @@
               <item name="mybatis-my-demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-my-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="pool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-my-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="redis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-my-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-my-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="support" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-my-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="task" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringFamilyTest" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-my-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringFamilyTest" type="b2602c69:ProjectViewProjectNode" />
@@ -364,14 +546,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,7 +563,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wlwpro" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../后台管理系统源码/clouddo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -394,11 +573,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\工作空间\SpringFamilyTest\mybatis-my-demo\src\main\java\com\elvis\demo\pool" />
       <recent name="D:\工作空间\SpringFamilyTest\mybatis-my-demo\src\main\java\com\elvis\demo\model" />
       <recent name="D:\工作空间\SpringFamilyTest\mybatis-my-demo\src\main\java\com\elvis\demo\mapper" />
       <recent name="D:\工作空间\SpringFamilyTest\barista\src\main\java\com\example\barista\barista\integration" />
       <recent name="D:\工作空间\SpringFamilyTest\barista\src\main\java\com\example\barista\barista\model" />
-      <recent name="D:\工作空间\SpringFamilyTest\mybatis-my-demo\src\main\java\com\elvis\demo\redis" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -508,6 +687,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Maintest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.elvis.demo.Maintest" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.elvis.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MybatisGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.elvis.demo.MybatisGenerator" />
       <module name="mybatisGenerator" />
@@ -527,19 +719,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.elvis.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Testmain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.elvis.demo.utils.Testmain" />
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.elvis.demo.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -610,9 +789,9 @@
     </configuration>
     <list>
       <item itemvalue="Application.MybatisMyDemoApplication" />
-      <item itemvalue="Application.Testmain" />
       <item itemvalue="Application.MybatisGenerator" />
       <item itemvalue="Application.BreakpointTest" />
+      <item itemvalue="Application.Maintest" />
       <item itemvalue="HTTP Request.interfaceTest#1" />
       <item itemvalue="Spring Boot.m2" />
       <item itemvalue="Spring Boot.m3" />
@@ -626,10 +805,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MybatisMyDemoApplication" />
+        <item itemvalue="Application.Maintest" />
         <item itemvalue="Application.BreakpointTest" />
         <item itemvalue="HTTP Request.interfaceTest#1" />
         <item itemvalue="Application.MybatisGenerator" />
-        <item itemvalue="Application.Testmain" />
       </list>
     </recent_temporary>
   </component>
@@ -669,7 +848,16 @@
       <workItem from="1561016991764" duration="6125000" />
       <workItem from="1561078400956" duration="7030000" />
       <workItem from="1561103838379" duration="311000" />
-      <workItem from="1561104267912" duration="452000" />
+      <workItem from="1561104267912" duration="1303000" />
+      <workItem from="1561304150034" duration="29000" />
+      <workItem from="1561336997446" duration="6663000" />
+      <workItem from="1561422701232" duration="738000" />
+      <workItem from="1561449354548" duration="4673000" />
+      <workItem from="1561512369885" duration="10903000" />
+      <workItem from="1561597912145" duration="8377000" />
+      <workItem from="1561622495470" duration="2239000" />
+      <workItem from="1561686163456" duration="815000" />
+      <workItem from="1561705646572" duration="7341000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1558337219085</created>
@@ -748,11 +936,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560820509556</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="新增自定义注解myLog以及使用AOP自动添加操作日志">
+      <created>1561104930175</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1561104930177</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164487000" />
+    <option name="totallyTimeSpent" value="207116000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -767,19 +962,18 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49339208" visible="true" weight="0.22334754" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49243465" visible="true" weight="0.24093817" />
       <window_info id="Structure" order="1" sideWeight="0.5033003" side_tool="true" weight="0.20213333" />
       <window_info id="Web" order="2" sideWeight="0.5042445" side_tool="true" weight="0.20415778" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.5060506" side_tool="true" weight="0.21695095" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32929516" />
+      <window_info id="Favorites" order="5" sideWeight="0.5075653" side_tool="true" weight="0.22523962" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32893288" />
       <window_info anchor="bottom" id="Messages" order="1" weight="0.32819384" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49946696" weight="0.32929516" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49946696" weight="0.35132158" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.37114537" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4989339" weight="0.31938326" />
+      <window_info active="true" anchor="bottom" id="Debug" order="5" visible="true" weight="0.37114537" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.49946696" weight="0.32819384" />
@@ -788,16 +982,17 @@
       <window_info anchor="bottom" id="Problems" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.32819384" />
-      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.4989339" weight="0.18832599" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5010661" side_tool="true" weight="0.29845816" />
+      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.4978678" weight="0.42180616" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5021322" side_tool="true" weight="0.18832599" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.32819384" />
       <window_info anchor="bottom" id="REST Client" order="17" sideWeight="0.49946696" weight="0.32929516" />
+      <window_info anchor="bottom" id="Inspection Results" order="18" weight="0.32929516" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Database" order="4" weight="0.25692964" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.1684435" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.1684435" />
       <window_info anchor="right" id="Bean Validation" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Key Promoter X" order="8" />
@@ -817,17 +1012,12 @@
     <MESSAGE value="初次提交q" />
     <MESSAGE value="新增秒杀以及redissession保存" />
     <MESSAGE value="redisd队列 发布订阅模式和队列模式" />
-    <option name="LAST_COMMIT_MESSAGE" value="redisd队列 发布订阅模式和队列模式" />
+    <MESSAGE value="新增自定义注解myLog以及使用AOP自动添加操作日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增自定义注解myLog以及使用AOP自动添加操作日志" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/MybatisMyDemoApplication.java</url>
-          <line>85</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/task/MsghandleThread.java</url>
           <line>23</line>
@@ -841,10 +1031,16 @@
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/CoffeeController.java</url>
-          <line>54</line>
+          <url>file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/RequestParamCheck.java</url>
+          <line>29</line>
           <properties />
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/MybatisMyDemoApplication.java</url>
+          <line>103</line>
+          <properties />
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="java.lang.Exception" package="java.lang" />
@@ -855,6 +1051,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>ResourceUtils.getFile(&quot;spy.properties&quot;);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>cr</expression-string>
         <language-id>JAVA</language-id>
@@ -926,415 +1127,364 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/barista/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/mvnw">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
+        <state relative-caret-position="-594" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/model/CoffeeOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar!/com/fasterxml/jackson/annotation/JsonFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/ch/qos/logback/classic/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="583" selection-start-line="583" selection-end-line="583" />
-          <folding>
-            <element signature="e#19963#19964#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.7.RELEASE/spring-core-5.1.7.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="33" column="110" selection-start-line="33" selection-start-column="110" selection-end-line="33" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.1.7.RELEASE/spring-tx-5.1.7.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="54" column="283" selection-start-line="54" selection-start-column="283" selection-end-line="54" selection-end-column="283" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.7.RELEASE/spring-aop-5.1.7.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="94" column="209" selection-start-line="94" selection-start-column="209" selection-end-line="94" selection-end-column="209" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.1.7.RELEASE/spring-messaging-5.1.7.RELEASE.jar!/org/springframework/messaging/handler/invocation/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="27" column="94" selection-start-line="27" selection-start-column="94" selection-end-line="27" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/service/CoffeeOrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/integration/OrderListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/tools/jar/CommandLine.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.5.RELEASE/spring-boot-2.1.5.RELEASE.jar!/org/springframework/boot/ApplicationRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="820" selection-start-line="820" selection-end-line="820" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/BreakpointTest.java" />
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-dependencies/2.1.5.RELEASE/spring-boot-dependencies-2.1.5.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="2592" column="6" selection-start-line="2592" selection-start-column="6" selection-end-line="2592" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/integration/Barista.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/repository/CoffeeOrderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/BaristaApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/model/OrderState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/model/CoffeeOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/barista/src/main/java/com/example/barista/barista/integration/BaristaListen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/barista/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="878">
-          <caret line="103" column="20" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/service/GoodsService.java">
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-dependencies/2.1.3.RELEASE/spring-boot-dependencies-2.1.3.RELEASE.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <caret line="524" column="12" selection-start-line="524" selection-start-column="12" selection-end-line="524" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/model/Coffee.java">
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/test/java/com/elvis/demo/MybatisMyDemoApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="8" selection-start-column="8" selection-end-column="28" />
           <folding>
-            <element signature="e#2236#2237#0" expanded="true" />
-            <element signature="e#2261#2262#0" expanded="true" />
-            <element signature="e#2816#2817#0" expanded="true" />
-            <element signature="e#2844#2845#0" expanded="true" />
-            <element signature="e#3141#3142#0" expanded="true" />
-            <element signature="e#3174#3175#0" expanded="true" />
-            <element signature="e#3803#3804#0" expanded="true" />
-            <element signature="e#3847#3848#0" expanded="true" />
-            <element signature="e#4144#4145#0" expanded="true" />
-            <element signature="e#4177#4178#0" expanded="true" />
-            <element signature="e#4806#4807#0" expanded="true" />
-            <element signature="e#4850#4851#0" expanded="true" />
-            <element signature="e#5144#5145#0" expanded="true" />
-            <element signature="e#5175#5176#0" expanded="true" />
-            <element signature="e#5792#5793#0" expanded="true" />
-            <element signature="e#5832#5833#0" expanded="true" />
-            <element signature="e#6111#6112#0" expanded="true" />
-            <element signature="e#6138#6139#0" expanded="true" />
-            <element signature="e#6715#6716#0" expanded="true" />
-            <element signature="e#6776#6777#0" expanded="true" />
-            <element signature="e#7057#7058#0" expanded="true" />
-            <element signature="e#7085#7086#0" expanded="true" />
-            <element signature="e#7669#7670#0" expanded="true" />
-            <element signature="e#7703#7704#0" expanded="true" />
+            <element signature="e#0#1279#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE-sources.jar!/org/springframework/http/HttpStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/MybatisMyDemoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="43" column="29" lean-forward="true" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/annotation/MyLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/PerformanceAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/RequestParamCheck.java">
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/test/java/com/elvis/demo/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/resources/logback-spring.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.3.RELEASE/spring-boot-2.1.3.RELEASE-sources.jar!/org/springframework/boot/context/TypeExcludeFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        <state relative-caret-position="418">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.3.RELEASE/spring-boot-autoconfigure-2.1.3.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/SpringBootApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.5.RELEASE/spring-boot-2.1.5.RELEASE.jar!/org/springframework/boot/jdbc/EmbeddedDatabaseConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#1554#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.3.RELEASE/spring-boot-2.1.3.RELEASE-sources.jar!/org/springframework/boot/jdbc/EmbeddedDatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#4961#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/redis/ApplicationContextHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/2.0.0/mybatis-spring-2.0.0-sources.jar!/org/mybatis/spring/annotation/MapperScan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1474">
+          <caret line="92" column="23" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/request/CoffeeRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/utils/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#1218#1219#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/StringReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.0/mybatis-3.5.0.jar!/org/apache/ibatis/ognl/JavaCharStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-core/1.1.3/micrometer-core-1.1.3-sources.jar!/io/micrometer/core/instrument/binder/tomcat/TomcatMetrics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="259" selection-start-line="259" selection-end-line="259" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="435" selection-start-line="435" selection-end-line="435" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/reflect/generics/parser/SignatureParser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/src.zip!/java/net/URLClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="381" selection-start-line="381" selection-end-line="381" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.4.3/amqp-client-5.4.3.jar!/com/rabbitmq/client/impl/Frame.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="19" column="114" selection-start-line="19" selection-start-column="114" selection-end-line="19" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.4.3/amqp-client-5.4.3.jar!/com/rabbitmq/client/impl/SocketFrameHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="39" column="82" selection-start-line="39" selection-start-column="82" selection-end-line="39" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11-sources.jar!/org/apache/http/impl/BHttpConnectionBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="343" selection-start-line="343" selection-end-line="343" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/src.zip!/java/net/SocketInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/CoffeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/resources/mapper/com/elvis/demo/mapper/LogMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/GoodsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1660">
-          <caret line="89" column="24" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/mapper/CoffeeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="110">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/service/CoffeeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="22">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/nio/ch/WindowsSelectorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="133" column="27" selection-start-line="133" selection-start-column="27" selection-end-line="133" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.5.RELEASE/spring-beans-5.1.5.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.1.5.RELEASE/spring-context-support-5.1.5.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/controller/CoffeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="44" column="112" selection-start-line="44" selection-start-column="112" selection-end-line="44" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/house-master/house-main/src/main/java/com/tu/house/map/baidu/SnCal.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/RequestParamCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/model/GoodsOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/model/Goods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/model/CoffeeExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/model/Coffee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar!/com/fasterxml/jackson/annotation/JsonFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1078">
+          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/MyLogAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state relative-caret-position="946">
+          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/mapper/LogMapper.java">
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/model/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/exception/Exceptionhandle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/aspect/PerformanceAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/service/GoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="98" column="65" selection-start-line="98" selection-start-column="65" selection-end-line="98" selection-end-column="65" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/redisson/redisson/3.11.1/redisson-3.11.1.jar!/org/redisson/api/RedissonClient.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/resources/mapper/com/elvis/demo/mapper/CoffeeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/resources/mapper/com/elvis/demo/mapper/CoffeeOrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/resources/mapper/com/elvis/demo/mapper/GoodsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/resources/mapper/com/elvis/demo/mapper/GoodsOrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/redis/RedisCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#3998#3999#0" expanded="true" />
+            <element signature="e#4022#4023#0" expanded="true" />
+            <element signature="e#4083#4084#0" expanded="true" />
+            <element signature="e#4119#4120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/component/RedisLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/service/RedisTemplateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/support/MoneyFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/component/RedisMessageReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/handle/MoneyTypeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/integration/OrderListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/mapper/CoffeeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/mapper/CoffeeOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/mapper/GoodsOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo-1/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo-1/src/main/java/com/elvis/demo/DataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <folding>
+            <element signature="e#0#2558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/resources/redisson.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.5.RELEASE/spring-core-5.1.5.RELEASE-sources.jar!/org/springframework/cglib/proxy/MethodProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="245" selection-start-line="245" selection-end-line="245" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-my-demo/src/main/java/com/elvis/demo/MybatisMyDemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

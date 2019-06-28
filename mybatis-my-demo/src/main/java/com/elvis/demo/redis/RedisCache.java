@@ -23,6 +23,7 @@ public class RedisCache implements Cache {
 
     private static final long EXPIRE_TIME_IN_MINUTES = 1; // redis过期时间
 
+
     public RedisCache(String id) {
         if (id == null) {
             throw new IllegalArgumentException("Cache instances require an ID");

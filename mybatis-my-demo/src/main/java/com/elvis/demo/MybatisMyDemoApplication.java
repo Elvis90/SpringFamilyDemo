@@ -15,6 +15,9 @@ import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
 import org.mybatis.spring.annotation.MapperScan;
+import org.redisson.Redisson;
+import org.redisson.api.RLock;
+import org.redisson.config.Config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,9 +25,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -52,11 +59,22 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 	CoffeeOrderService cos;
 	@Autowired
 	RedisTemplateService rts;
+	@Autowired
+	Redisson redisson;
 	public static void main(String[] args) {
-		SpringApplication.run(MybatisMyDemoApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(MybatisMyDemoApplication.class, args);
+
+//		ConvertThreadPool.getInstance().execute(new MyThread("abc"));
+//		log.info("main线程开始循环");
+//		for (int i = 0; i < 10; i++) {
+//			try {
+//				Thread.sleep(10000);
+//				log.info("main线程"+i);
+//			}catch (Exception e){
+//				e.printStackTrace();
+//			}
+//		}
 	}
-
-
 
 
 
@@ -80,6 +98,13 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 		cos.updateStatus(OrderState.TAKEN, list.get(0).getId());*/
 
 		//new Thread(new MsghandleThread()).start();
+
+		RLock mylock = redisson.getLock("mylock");
+		mylock.lock();
+		for (int i = 0; i < 10; i++) {
+			log.info(i+"");
+		}
+		mylock.unlock();
 	}
 
 	private void generateArtifacts() throws Exception {
@@ -100,5 +125,13 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 		List<Coffee> list = coffeeMapper.selectByExample(coffeeExample);
 		list.forEach(o->log.info("res:{}",o));
 	}
+
+	@Bean
+	public Redisson redisson() throws IOException {
+		Config config = Config.fromYAML(new File("/redisson.yaml"));
+		config.useSingleServer();
+		return (Redisson) Redisson.create(config);
+	}
+
 
 }

@@ -14,6 +14,7 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -30,6 +31,7 @@ import java.lang.reflect.Method;
 @Aspect
 @Component
 @Slf4j
+@Order(2)
 public class MyLogAspect {
     @Autowired
     LogMapper logmapper;
