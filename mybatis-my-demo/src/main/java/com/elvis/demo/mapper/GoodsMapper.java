@@ -1,9 +1,10 @@
 package com.elvis.demo.mapper;
 
 import com.elvis.demo.model.Goods;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public interface GoodsMapper {
     int deleteByPrimaryKey(Long id);
 

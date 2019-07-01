@@ -2,7 +2,9 @@ package com.elvis.demo.mapper;
 
 import com.elvis.demo.model.GoodsOrder;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface GoodsOrderMapper {
     int deleteByPrimaryKey(Long id);
 

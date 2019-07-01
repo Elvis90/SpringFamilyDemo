@@ -113,7 +113,7 @@ public class RedisCache implements Cache {
         Set set = redisTemplate.keys("*");
         for(Object o :set){
         	String key = o.toString();
-        	if(!key.startsWith("wisdom") && !key.startsWith("spring")){
+        	if(!key.startsWith("wisdom") && !key.startsWith("spring") && !key.startsWith("lock")){
         		redisTemplate.delete(o);
         	}
         }

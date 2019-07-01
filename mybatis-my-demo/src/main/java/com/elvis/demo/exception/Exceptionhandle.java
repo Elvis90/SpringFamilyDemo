@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class Exceptionhandle {
     @ExceptionHandler(Exception.class)
     ResponseEntity exception(Exception e) {
+        e.printStackTrace();
         log.error("全局异常捕获"+e.getMessage());
         return new ResponseEntity<R>(R.error(), HttpStatus.INTERNAL_SERVER_ERROR);
     }

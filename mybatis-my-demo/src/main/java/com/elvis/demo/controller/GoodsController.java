@@ -85,17 +85,11 @@ public class GoodsController {
     @PostMapping("seckill/{id}")
     @ResponseBody
     public Object seckill(@PathVariable("id") Long Id){
-        boolean res=false;
         try{
-            res = gs.seckill(Id);
+            gs.seckill(Id);
+            return new ResponseEntity<R>(R.ok("抢购成功"),HttpStatus.OK);
         }catch (Exception e){
             return new ResponseEntity<R>(R.error(500,e.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-
-        if(res){
-            return new ResponseEntity<R>(R.ok("抢购成功"),HttpStatus.OK);
-        }else{
-            return new ResponseEntity<R>(R.error(500,"活动太火爆了 请稍后再试吧"),HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }

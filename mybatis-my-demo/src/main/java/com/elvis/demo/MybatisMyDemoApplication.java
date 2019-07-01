@@ -16,8 +16,6 @@ import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
 import org.mybatis.spring.annotation.MapperScan;
 import org.redisson.Redisson;
-import org.redisson.api.RLock;
-import org.redisson.config.Config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -26,13 +24,9 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -50,7 +44,6 @@ import java.util.List;
 @EnableRedisHttpSession(maxInactiveIntervalInSeconds = 10)
 //当前版本spring redis会在session过期时间上加300S
 @EnableBinding(Barista.class)
-@ImportResource({"classpath*:redisson.yaml"})
 public class MybatisMyDemoApplication implements CommandLineRunner{
 
 	@Autowired
@@ -101,12 +94,13 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 
 		//new Thread(new MsghandleThread()).start();
 
-		RLock mylock = redisson.getLock("mylock");
-		mylock.lock();
-		for (int i = 0; i < 10; i++) {
-			log.info(i+"");
-		}
-		mylock.unlock();
+//		RLock mylock = redisson.getLock("mylock");
+//		mylock.lock();
+//		for (int i = 0; i < 10; i++) {
+//			log.info(i+"");
+//		}
+//		Thread.sleep(40000);
+//		mylock.unlock();
 	}
 
 	private void generateArtifacts() throws Exception {
@@ -128,12 +122,7 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 		list.forEach(o->log.info("res:{}",o));
 	}
 
-	@Bean
-	public Redisson redisson() throws IOException {
-		Config config = Config.fromYAML(new File("redisson.yaml"));
-		config.useSingleServer();
-		return (Redisson) Redisson.create(config);
-	}
+
 
 
 }
