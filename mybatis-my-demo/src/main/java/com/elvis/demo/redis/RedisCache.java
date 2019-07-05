@@ -29,6 +29,7 @@ public class RedisCache implements Cache {
             throw new IllegalArgumentException("Cache instances require an ID");
         }
         this.id = id;
+
     }
 
     @Override
@@ -142,4 +143,6 @@ public class RedisCache implements Cache {
         }
         return redisTemplate;
     }
+
+
 }

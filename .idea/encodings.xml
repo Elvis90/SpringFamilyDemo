@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/barista" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customerserver" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/customerserver/src/main/resources/application.properties" charset="GBK" />
     <file url="file://$PROJECT_DIR$/eurekaserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-my-demo" charset="UTF-8" />
   </component>

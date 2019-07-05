@@ -28,6 +28,8 @@ import java.util.List;
 public class GoodsController {
     @Autowired
     GoodsService gs;
+    @Autowired
+    private RedisTemplateService rt;
     //String类型redis有默认处理的类
 //    @Autowired
 //    RedisTemplate<String,String> rt;
@@ -90,6 +92,16 @@ public class GoodsController {
             return new ResponseEntity<R>(R.ok("抢购成功"),HttpStatus.OK);
         }catch (Exception e){
             return new ResponseEntity<R>(R.error(500,e.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("redistest/{userName}")
+    public Object redistest(@PathVariable("userName") String userName){
+        boolean isbusy = rt.isbusy(userName);
+        if(isbusy){
+            return new ResponseEntity<R>(R.error(500,"你访问太快了休息会再来吧"),HttpStatus.INTERNAL_SERVER_ERROR);
+        }else{
+            return new ResponseEntity<R>(R.ok("请求成功"),HttpStatus.OK);
         }
     }
 }

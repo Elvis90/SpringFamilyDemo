@@ -32,7 +32,7 @@ public class CoffeeController {
 	}
 
 	//获取咖啡菜单
-	@GetMapping("dock")
+	@GetMapping("getmenu")
 	@ResponseBody
 	public ResponseEntity<R> getMenu() {
 		List<Coffee> menulist = cs.getMenu();

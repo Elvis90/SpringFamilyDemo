@@ -56,6 +56,7 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 	RedisTemplateService rts;
 	@Autowired
 	Redisson redisson;
+
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(MybatisMyDemoApplication.class, args);
 
@@ -94,6 +95,7 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 
 		//new Thread(new MsghandleThread()).start();
 
+		//redisson锁测试
 //		RLock mylock = redisson.getLock("mylock");
 //		mylock.lock();
 //		for (int i = 0; i < 10; i++) {
@@ -101,6 +103,9 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 //		}
 //		Thread.sleep(40000);
 //		mylock.unlock();
+
+
+
 	}
 
 	private void generateArtifacts() throws Exception {
