@@ -1,5 +1,8 @@
 package com.elvis.demo;
 
+import com.elvis.demo.designdemo.SingleCaseEnum;
+import com.elvis.demo.designdemo.VerifyStrategy;
+import com.elvis.demo.designdemo.myinterface.imp.NumVerify;
 import com.elvis.demo.integration.Barista;
 import com.elvis.demo.mapper.CoffeeMapper;
 import com.elvis.demo.model.Coffee;
@@ -18,18 +21,17 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.redisson.Redisson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.stream.annotation.EnableBinding;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 //import com.elvis.demo.model.Coffee;
 //import com.elvis.demo.model.CoffeeExample;
@@ -58,7 +60,7 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 	Redisson redisson;
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(MybatisMyDemoApplication.class, args);
+		// SpringApplication.run(MybatisMyDemoApplication.class, args);
 
 //		ConvertThreadPool.getInstance().execute(new MyThread("abc"));
 //		log.info("main线程开始循环");
@@ -70,6 +72,16 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 //				e.printStackTrace();
 //			}
 //		}
+
+		SingleCaseEnum.INSTANCE.otherMethods();
+		String s ="aa";
+		while(!s.equals("bye")){
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("验证一个数字");
+			String ss = scanner.nextLine();
+			boolean b = new VerifyStrategy(new NumVerify()).verify(ss);
+			System.out.println("结果"+b);
+		}
 	}
 
 

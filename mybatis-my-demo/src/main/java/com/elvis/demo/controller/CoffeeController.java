@@ -52,6 +52,7 @@ public class CoffeeController {
 	//	try {
 
 			Coffee cf = cs.creatCoffee(cr.getName(),cr.getPrice());
+			log.info("价格是:{}",cf.getPrice());
 			res= new ResponseEntity<R>(R.data(cf),HttpStatus.OK);
 		//}catch (Exception e){
 		//	log.error("新增咖啡失败"+e.getMessage());
