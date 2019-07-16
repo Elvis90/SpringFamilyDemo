@@ -1,14 +1,12 @@
 package com.elvis.demo;
 
-import com.elvis.demo.designdemo.SingleCaseEnum;
-import com.elvis.demo.designdemo.VerifyStrategy;
-import com.elvis.demo.designdemo.myinterface.imp.NumVerify;
 import com.elvis.demo.integration.Barista;
 import com.elvis.demo.mapper.CoffeeMapper;
 import com.elvis.demo.model.Coffee;
 import com.elvis.demo.model.CoffeeExample;
 import com.elvis.demo.service.CoffeeOrderService;
 import com.elvis.demo.service.CoffeeService;
+import com.elvis.demo.service.MailService;
 import com.elvis.demo.service.RedisTemplateService;
 import lombok.extern.slf4j.Slf4j;
 import org.joda.money.CurrencyUnit;
@@ -21,6 +19,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.redisson.Redisson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -31,7 +30,6 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Scanner;
 
 //import com.elvis.demo.model.Coffee;
 //import com.elvis.demo.model.CoffeeExample;
@@ -58,9 +56,11 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 	RedisTemplateService rts;
 	@Autowired
 	Redisson redisson;
+	@Autowired
+	MailService ms;
 
 	public static void main(String[] args) {
-		// SpringApplication.run(MybatisMyDemoApplication.class, args);
+		 SpringApplication.run(MybatisMyDemoApplication.class, args);
 
 //		ConvertThreadPool.getInstance().execute(new MyThread("abc"));
 //		log.info("main线程开始循环");
@@ -72,7 +72,7 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 //				e.printStackTrace();
 //			}
 //		}
-
+/*
 		SingleCaseEnum.INSTANCE.otherMethods();
 		String s ="aa";
 		while(!s.equals("bye")){
@@ -81,7 +81,7 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 			String ss = scanner.nextLine();
 			boolean b = new VerifyStrategy(new NumVerify()).verify(ss);
 			System.out.println("结果"+b);
-		}
+		}*/
 	}
 
 
@@ -116,7 +116,7 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 //		Thread.sleep(40000);
 //		mylock.unlock();
 
-
+//		ms.sendTemplateMail();
 
 	}
 
