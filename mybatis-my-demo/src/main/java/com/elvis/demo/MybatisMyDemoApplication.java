@@ -4,10 +4,7 @@ import com.elvis.demo.integration.Barista;
 import com.elvis.demo.mapper.CoffeeMapper;
 import com.elvis.demo.model.Coffee;
 import com.elvis.demo.model.CoffeeExample;
-import com.elvis.demo.service.CoffeeOrderService;
-import com.elvis.demo.service.CoffeeService;
-import com.elvis.demo.service.MailService;
-import com.elvis.demo.service.RedisTemplateService;
+import com.elvis.demo.service.*;
 import lombok.extern.slf4j.Slf4j;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
@@ -58,6 +55,8 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 	Redisson redisson;
 	@Autowired
 	MailService ms;
+	@Autowired
+	GoodsService goodsService;
 
 	public static void main(String[] args) {
 		// SpringApplication.run(MybatisMyDemoApplication.class, args);
@@ -91,6 +90,7 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
+		goodsService.initseckill();
 	//	generateArtifacts();
 //		showmybatis();
 		/*//测试缓存

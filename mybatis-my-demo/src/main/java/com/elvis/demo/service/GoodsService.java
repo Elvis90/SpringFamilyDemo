@@ -11,7 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Elvis
@@ -22,12 +25,15 @@ import java.util.List;
 public class GoodsService {
 
     private final static String lockName="lock-GoodsService";
+    public final static String seckilKey="seckill-key";
     @Autowired
     public GoodsMapper gm;
     @Autowired
     public GoodsOrderMapper gom;
     @Autowired
     public Redisson redisson;
+    @Autowired
+    public RedisTemplateService redisTemplateService;
     //查询商品库存
     public String findById(Long id){
 
@@ -41,6 +47,12 @@ public class GoodsService {
     public List<Goods> getAll(){
         return  gm.selectAll();
     }
+    public void initseckill(){
+        //初始化抢购状态
+        Map<String, Object> modelMap = new HashMap<>();
+        modelMap.put("status",true);
+        redisTemplateService.setKey(seckilKey,modelMap,10, TimeUnit.MINUTES);
+    }
     //下单
     public void seckill(Long id) throws RuntimeException{
         //加锁
@@ -51,7 +63,12 @@ public class GoodsService {
             Goods goods = gm.selectByPrimaryKey(id);
             if(goods!=null) {
                 if (goods.getCount() < 1) {
+                    //剩余商品小于0 将redis中抢购状态标记为结束
+                    Map<String, Object> modelMap = new HashMap<>();
+                    modelMap.put("status",false);
+                    redisTemplateService.setKey(seckilKey,modelMap,10,TimeUnit.MINUTES);
                     throw new RuntimeException("商品已经卖光啦");
+
                 }
                 goods.setCount(goods.getCount() - 1);
                 gm.updateByPrimaryKey(goods);
@@ -65,7 +82,8 @@ public class GoodsService {
                 throw new RuntimeException("商品ID不存在");
             }
         }catch (Exception e){
-            e.printStackTrace();
+           // e.printStackTrace();
+            throw e;
         }finally {
           rLock.unlock();
         }

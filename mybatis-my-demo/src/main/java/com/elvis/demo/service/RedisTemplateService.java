@@ -38,8 +38,9 @@ public class RedisTemplateService {
      * @param modelMap
      * @param mapName
      */
-    public void setKey(String mapName, Map<String, Object> modelMap) {
+    public void setKey(String mapName, Map<String, Object> modelMap,long timout,TimeUnit tu) {
         HashOperations<String, String, Object> hps = template.opsForHash();
+        template.expire(mapName,timout,tu);
         hps.putAll(mapName, modelMap);
     }
 

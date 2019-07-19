@@ -30,6 +30,7 @@ public class GoodsController {
     GoodsService gs;
     @Autowired
     private RedisTemplateService rt;
+
     //String类型redis有默认处理的类
 //    @Autowired
 //    RedisTemplate<String,String> rt;
@@ -88,6 +89,10 @@ public class GoodsController {
     @ResponseBody
     public Object seckill(@PathVariable("id") Long Id){
         try{
+            boolean status = (boolean)rt.getValue(GoodsService.seckilKey,"status");
+            if(!status){
+                return new ResponseEntity<R>(R.error(500,"商品卖光啦,下次赶早"),HttpStatus.INTERNAL_SERVER_ERROR);
+            }
             gs.seckill(Id);
             return new ResponseEntity<R>(R.ok("抢购成功"),HttpStatus.OK);
         }catch (Exception e){
