@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/customerserver/customerserver.iml" filepath="$PROJECT_DIR$/customerserver/customerserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-my-demo/demo.iml" filepath="$PROJECT_DIR$/mybatis-my-demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/eurekaserver/eurekaserver.iml" filepath="$PROJECT_DIR$/eurekaserver/eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-1/jdbcdemo-1.iml" filepath="$PROJECT_DIR$/demo-1/jdbcdemo-1.iml" />
     </modules>
   </component>
 </project>

@@ -7,9 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eurekaserver" />
-        <module name="barista" />
-        <module name="customerserver" />
+        <module name="jdbcdemo-1" />
         <module name="demo" />
+        <module name="customerserver" />
+        <module name="barista" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +18,7 @@
       <module name="customerserver" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="eurekaserver" target="1.8" />
+      <module name="jdbcdemo-1" target="1.8" />
       <module name="mybatisGenerator" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -26,6 +28,7 @@
       <module name="customerserver" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
+      <module name="jdbcdemo-1" options="-parameters" />
       <module name="mybatisGenerator" options="-parameters" />
     </option>
   </component>

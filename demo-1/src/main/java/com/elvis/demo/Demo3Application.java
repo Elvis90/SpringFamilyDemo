@@ -4,11 +4,13 @@ import com.elvis.demo.service.TxTestService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
 
 
 /*
@@ -18,7 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @Slf4j
 @EnableTransactionManagement
-@ComponentScan(basePackages={"com.elvis.demo"})
+//@ComponentScan(basePackages={"com.elvis.demo"})
 public class Demo3Application implements CommandLineRunner{
 	 @Autowired
 	 protected JdbcTemplate jdbcTemplate;
@@ -27,7 +29,13 @@ public class Demo3Application implements CommandLineRunner{
 	 @Autowired
 	 private TxTestService txService;
 	public static void main(String[] args) {
-		SpringApplication.run(Demo3Application.class, args);
+
+		//SpringApplication.run(Demo3Application.class, args);
+
+		String[] array={"a","b","c","c","c","b","b"};
+		LinkedHashSet<String> linkedset = new LinkedHashSet<>(Arrays.asList(array));
+		ArrayList<String> list = new ArrayList<>(linkedset);
+		list.forEach(s->System.out.println(s));
 	}
 	@Override
 	public void run(String... args) throws Exception {
@@ -73,7 +81,8 @@ public class Demo3Application implements CommandLineRunner{
 			log.error("exception");
 		}
 		log.info("==insertdataRollBack2==="+getcount());
-		
+
+
 	}
 	
 	public long getcount() {

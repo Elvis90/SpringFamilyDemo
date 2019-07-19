@@ -60,8 +60,11 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 	MailService ms;
 
 	public static void main(String[] args) {
-		 SpringApplication.run(MybatisMyDemoApplication.class, args);
+		// SpringApplication.run(MybatisMyDemoApplication.class, args);
 
+		SpringApplication app = new SpringApplication(MybatisMyDemoApplication.class);
+		//app.setBannerMode(Banner.Mode.LOG);
+		app.run(args);
 //		ConvertThreadPool.getInstance().execute(new MyThread("abc"));
 //		log.info("main线程开始循环");
 //		for (int i = 0; i < 10; i++) {
