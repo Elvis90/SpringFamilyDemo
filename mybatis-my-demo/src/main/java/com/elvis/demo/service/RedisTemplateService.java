@@ -32,6 +32,7 @@ public class RedisTemplateService {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
+
     /**
      * 存储数据或修改数据
      *

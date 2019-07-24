@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.elvis.demo.model.Goods;
 import com.elvis.demo.service.GoodsService;
 import com.elvis.demo.service.RedisTemplateService;
+import com.elvis.demo.service.RedisUtil;
 import com.elvis.demo.task.MsghandleThread;
 import com.elvis.demo.utils.R;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +30,7 @@ public class GoodsController {
     @Autowired
     GoodsService gs;
     @Autowired
-    private RedisTemplateService rt;
+    private RedisUtil redisUtil;
 
     //String类型redis有默认处理的类
 //    @Autowired
@@ -89,11 +90,16 @@ public class GoodsController {
     @ResponseBody
     public Object seckill(@PathVariable("id") Long Id){
         try{
-            boolean status = (boolean)rt.getValue(GoodsService.seckilKey,"status");
-            if(!status){
-                return new ResponseEntity<R>(R.error(500,"商品卖光啦,下次赶早"),HttpStatus.INTERNAL_SERVER_ERROR);
+            if(redisUtil.hasKey(GoodsService.seckilKey)){
+                boolean status = (boolean) redisUtil.get(GoodsService.seckilKey);
+                if(!status){
+                    return new ResponseEntity<R>(R.error(500,"商品卖光啦,下次赶早"),HttpStatus.INTERNAL_SERVER_ERROR);
+                }else{
+                    gs.seckill(Id);
+                }
+            }else{
+                gs.initseckill();
             }
-            gs.seckill(Id);
             return new ResponseEntity<R>(R.ok("抢购成功"),HttpStatus.OK);
         }catch (Exception e){
             return new ResponseEntity<R>(R.error(500,e.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
@@ -102,7 +108,7 @@ public class GoodsController {
 
     @GetMapping("redistest/{userName}")
     public Object redistest(@PathVariable("userName") String userName){
-        boolean isbusy = rt.isbusy(userName);
+        boolean isbusy = rts.isbusy(userName);
         if(isbusy){
             return new ResponseEntity<R>(R.error(500,"你访问太快了休息会再来吧"),HttpStatus.INTERNAL_SERVER_ERROR);
         }else{

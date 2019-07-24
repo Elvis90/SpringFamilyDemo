@@ -13,8 +13,6 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author Elvis
@@ -33,7 +31,7 @@ public class GoodsService {
     @Autowired
     public Redisson redisson;
     @Autowired
-    public RedisTemplateService redisTemplateService;
+    public RedisUtil redisUtil;
     //查询商品库存
     public String findById(Long id){
 
@@ -49,9 +47,11 @@ public class GoodsService {
     }
     public void initseckill(){
         //初始化抢购状态
-        Map<String, Object> modelMap = new HashMap<>();
-        modelMap.put("status",true);
-        redisTemplateService.setKey(seckilKey,modelMap,10, TimeUnit.MINUTES);
+        redisUtil.set(seckilKey,true,600);
+        HashMap<Object, Object> map = new HashMap<>();
+        map.put("k1","v1");
+        map.put("k2","v2");
+        redisUtil.set("testmapset",map,60);
     }
     //下单
     public void seckill(Long id) throws RuntimeException{
@@ -64,9 +64,7 @@ public class GoodsService {
             if(goods!=null) {
                 if (goods.getCount() < 1) {
                     //剩余商品小于0 将redis中抢购状态标记为结束
-                    Map<String, Object> modelMap = new HashMap<>();
-                    modelMap.put("status",false);
-                    redisTemplateService.setKey(seckilKey,modelMap,10,TimeUnit.MINUTES);
+                    redisUtil.set(seckilKey,false,600);
                     throw new RuntimeException("商品已经卖光啦");
 
                 }

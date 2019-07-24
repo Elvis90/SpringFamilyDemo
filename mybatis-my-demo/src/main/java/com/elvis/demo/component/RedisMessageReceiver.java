@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class RedisMessageReceiver implements MessageListener {
     @Autowired
-    private RedisTemplate<Object, Object> redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 //    @Override
 //    public void onMessage(Message message, byte[] pattern) {
 //        RedisSerializer<String> serializer = redisTemplate.getStringSerializer();
