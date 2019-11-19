@@ -41,6 +41,8 @@ public abstract class AbstractThreadPool {
 		threadpool.execute(command);
 	}
 
+
+
 	/**
 	 * 同步阻塞执行线程
 	 * 

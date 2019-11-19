@@ -121,6 +121,18 @@ public class MybatisMyDemoApplication implements CommandLineRunner{
 
 //		ms.sendTemplateMail();
 
+		/*callable异步处理
+		Callable<String> callable = new Callable<String>() {
+			@Override
+			public String call() throws Exception {
+				return "testcall";
+			}
+		};
+
+		FutureTask<String> futureTask = new FutureTask<String>(callable);
+		ConvertThreadPool.getInstance().execute(futureTask);
+		log.info("异步执行获取返回值:{}",futureTask.get()); //get方法阻塞
+	*/
 	}
 
 	private void generateArtifacts() throws Exception {
