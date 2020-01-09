@@ -169,10 +169,6 @@ public class ExcelUtils {
         if (cell == null) {
             return cellValue;
         }
-        //把数字当成String来读，避免出现1读成1.0的情况
-//        if (cell.getCellTypeEnum() == CellType.NUMERIC) {
-//            cell.setCellType(CellType.STRING);
-//        }
 
         //判断数据的类型
         switch (cell.getCellTypeEnum()) {
