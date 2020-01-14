@@ -1,5 +1,6 @@
 package com.elvis.demo;
 
+import com.elvis.demo.function.MyFunction;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -26,6 +27,16 @@ import java.util.function.Supplier;
  */
 public class TestLambda {
     private String[] userarray ={"周杰伦,35","刘德华,58","Elvis,30"};
+
+    @Test
+    public void testLambad(){
+        Long value = handle(100l, 200l, (x, y) -> x * y);
+        System.out.println(value);
+    }
+
+    private Long handle(Long t1, Long t2, MyFunction<Long,Long> f){
+        return f.getValue(t1,t2);
+    }
 
     @Test
     public void ConsumerTest(){
