@@ -1,0 +1,47 @@
+<application>
+  <component name="AppStorage">
+    <histories>
+      <item value="url to the terms of service" />
+      <item value="terms" />
+      <item value="前缀" />
+      <item value="成功" />
+      <item value="失败" />
+      <item value="查询" />
+      <item value="fron Identifier Info Servier" />
+      <item value="fronidentifierinfoservier" />
+      <item value="Nmfa Bill Service" />
+      <item value="重新" />
+      <item value="integration" />
+      <item value="将来" />
+      <item value="秒" />
+      <item value="差值" />
+      <item value="General purpose factory loading mechanism for internal use within the framework" />
+      <item value="Indicates a {@link Configuration configuration} class that declares one or more" />
+      <item value="默认" />
+      <item value="断点" />
+      <item value="咖啡师" />
+      <item value="队列" />
+      <item value="消费消息" />
+      <item value="cache singleton objects (where possible)" />
+      <item value="Convert Coffee to JSON success, copied to the clipboard" />
+      <item value="抢购成功" />
+      <item value="session" />
+    </histories>
+    <option name="languageScores">
+      <map>
+        <entry key="CHINESE" value="10" />
+        <entry key="ENGLISH" value="10" />
+        <entry key="FRENCH" value="1" />
+      </map>
+    </option>
+  </component>
+  <component name="Settings">
+    <option name="baiduTranslateSettings">
+      <app-key>
+        <option name="appId" value="20190916000334645" />
+      </app-key>
+    </option>
+    <option name="ignoreRegExp" value="" />
+    <option name="translator" value="fanyi.baidu" />
+  </component>
+</application>
